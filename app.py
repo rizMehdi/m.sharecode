@@ -14,7 +14,7 @@ def main():
         option = st.radio("Are you any of the following?", 
             "British Citizen",
             "Irish Citizen",
-            "Commonwealth Citizen", help="SCUBA: Self Contained Underwater Breathing Aparatus"
+            ["Commonwealth Citizen", help="SCUBA: Self Contained Underwater Breathing Aparatus"],
             "Diplomat or their family member based in the UK",
             "None of the above"
                          )
