@@ -10,14 +10,22 @@ def main():
     st.write("To create a sharecode, you will be asked a series of questions to check if you have the minimum eligibility for social-housing assistance.")
     st.write("There might be additional requirements based on where you live or where you want to apply for social housing.")
     
+    # Create a container to manage visibility of content
+    content_container = st.container()
+    
     if st.button("Check eligibility and create sharecode"):
-        option = st.radio("Are you any of the following?", 
+        # Clear the previous content
+        content_container.empty()
+        
+        # Add the eligibility check content
+        option = st.radio("Are you any of the following?", [
             "British Citizen",
             "Irish Citizen",
-            ["Commonwealth Citizen", help="SCUBA: Self Contained Underwater Breathing Aparatus"],
+            "Commonwealth Citizen",
             "Diplomat or their family member based in the UK",
             "None of the above"
-                         )
+        ])
+        
         st.write(f"You selected: {option}")
     
 if __name__ == "__main__":
