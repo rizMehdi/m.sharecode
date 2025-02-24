@@ -14,10 +14,10 @@ def main():
         option = st.radio("Are you any of the following?", [
             "British Citizen",
             "Irish Citizen",
-            "Commonwealth Citizen",
+            "Commonwealth Citizen ❓",
             "Diplomat or their family member based in the UK",
             "None of the above"
-        ])
+        ], help="A Commonwealth citizen is a citizen of a Commonwealth of Nations member state. Check here if your country is a commonwealth member: https://thecommonwealth.org/our-member-countries")
         
         st.write(f"You selected: {option}")
     
